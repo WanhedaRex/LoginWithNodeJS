@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/65ea003a65.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container-form sign-in">
+        <form action="/auth" method="POST" class="formulario">
+          <h2 class="create-account">Iniciar sesion</h2>
+          <div class="iconos">
+            <div class="border-icon">
+              <i class="fab fa-twitter fa-spin"></i>
+            </div>
+            <div class="border-icon">
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div class="border-icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </div>     
+          <p class="cuenta-gratis">¿Aun no tienes cuenta?</p>
+          <input  class="inp" type="text" name="user" id="user"  placeholder="User" required>
+          <input class="inp" type="password" name="pass" id="pass"  placeholder="Password" required>   
+          <input class="subb" type="submit" value="Login">
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+              <h2>Bienvenido de nuevo a nuestro baazar</h2>
+              <p>Si aun no tiene una cuenta puede registrarse con ese boton!</p>
+          <a href="register"><button class="sign-in-btn">Registrarse</button></a>   
+            </div>
+        </div>
+      </div>   
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <% if (typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title:'<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<%= showConfirmButton %>',
+                timer: '<%= timer %>'
+            }).then(()=>{
+                window.location='/<%= ruta   %>'
+            })
+        </script>
+   <% } %>
+</body>
+</html>

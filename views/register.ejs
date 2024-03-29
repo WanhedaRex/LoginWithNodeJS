@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/65ea003a65.js" crossorigin="anonymous"></script>
+    <title>Register</title>
+</head>
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+              <h2>Bienvenido a nuestro baazar</h2>
+              <p>Tienes una cuenta? ¡Inicia sesion con este boton!</p>
+          <a href="login"><button class="sign-up-btn">Iniciar Sesion</button></a>    
+            </div>
+        </div>
+        <form action="/register" method="POST" class="formulario">
+          <h2 class="create-account">Crear una cuenta</h2>
+          <div class="iconos">
+            <div class="border-icon">
+              <i class="fab fa-twitter fa-spin"></i>
+            </div>
+            <div class="border-icon">
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div class="border-icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </div>
+          <p class="cuenta-gratis">Crear una cuenta gratis</p>
+          <input class="inp" type="text"  name="user" placeholder="User" required>
+          <input class="inp"  type="email" name ="email" placeholder="Email" required>
+          <input class="inp" type="password" name="pass" placeholder="Password" required>
+          <input class="subb" type="submit" value="Save">
+        </form>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <% if (typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title:'<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<%= showConfirmButton %>',
+                timer: '<%= timer %>'
+            }).then(()=>{
+                window.location='/ <%= ruta   %>'
+            })
+        </script>
+   <% } %>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/65ea003a65.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+
+  <% if (login) { %>                
+      <h1>Usuario conectado <strong><%= name %></strong></h1>                        
+      <a href="logout" class="a-logout">Logout</a>
+  <%} else { %>
+      <h1><strong><%= name %></strong></h1>   
+      <a  href="login" class="a-login">Ir a Login</a>
+  <% } %>
+
+ 
+</body>
+</html>
